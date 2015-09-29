@@ -4,7 +4,7 @@
 class PageRequest {
     private $parsed;
     
-    function PageRequest($raw) {
+    function __construct($raw) {
         $statements = explode('&', $raw);
         $this->parsed = array();
         foreach ($statements as $statement) {

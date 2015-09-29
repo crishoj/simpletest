@@ -23,8 +23,8 @@ class TreemapRecorder extends SimpleReporter {
 	var $_stack;
 	var $_title;
 
-	function TreemapRecorder() {
-		$this->SimpleReporter();
+	function __construct() {
+		parent::__construct();
 		$this->_stack = new TreemapStack();
 		$this->_graph = null;
 	}

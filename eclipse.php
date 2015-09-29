@@ -29,7 +29,7 @@ class EclipseReporter extends SimpleScorer {
      */
     function __construct(&$listener, $cc=false){
         $this->listener = &$listener;
-        $this->SimpleScorer();
+        parent::__construct();
         $this->case = "";
         $this->group = "";
         $this->method = "";
@@ -275,7 +275,7 @@ class EclipseReporter extends SimpleScorer {
 class EclipseInvoker extends SimpleInvokerDecorator{
     function __construct(&$invoker, &$listener) {
         $this->listener = &$listener;
-        $this->SimpleInvokerDecorator($invoker);
+        parent::__construct($invoker);
     }
 
     /**
